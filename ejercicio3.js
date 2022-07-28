@@ -5,9 +5,8 @@
 
 const wordCounter = (sentence, word) => {
     let counter = 0;
-    let cleanSentence = sentence.toLowerCase().replace(/([!¡.,-])/gi, '');
-    cleanSentence.split(' ').filter(w => (w.toLowerCase() === word) && counter++)
-
+    let cleanSentence = sentence.toLowerCase().replace(/[!,.?-]/gi,'');
+    cleanSentence.split(' ').filter( w => (w.toLowerCase() === word ) && counter++)
     return counter
 }
 
